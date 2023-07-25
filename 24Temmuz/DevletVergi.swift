@@ -8,12 +8,12 @@
 import Foundation
 
 protocol DevletVergi {
-    func trtPayi(trtPayi: Double) -> Double
+    func trtPayi(trtPayi: Double,fatura:Double) -> Double
 }
 
 extension DevletVergi {
-    func trtPayi(trtPayi: Double) -> Double {
-        let trtPayiNew = trtPayi
-        return trtPayiNew
+    func trtPayi(trtPayi: Double,fatura:Double) -> Double {
+        let trtPayliHali = fatura * trtPayi
+        return trtPayliHali
     }
 }

@@ -8,11 +8,11 @@
 import Foundation
 
 class TRTClass {
-    var tayyip: DevletVergi?
+    var TRTBaskani: DevletVergi?
     var trtPayi = 1.02
     
-    func process() -> Double {
-        let pay = tayyip?.trtPayi(trtPayi: trtPayi)
+    func process(fatura:Double) -> Double {// bunu ilk burada tanımlıyorsun. dolayısıyla diğer yerde cagırdıgında istediğin veriyi içine koyabilieceksin.
+        let pay = TRTBaskani?.trtPayi(trtPayi: trtPayi,fatura: fatura)// buradaki iki veriden birini zaten aynı classdaki veriden alıyor. diğerini func processten alıyor. 
         return pay!
     }
     

@@ -8,11 +8,7 @@
 import UIKit
 
 class TestViewController: UIViewController, DevletVergi {
-
-    
-    
-    
-
+  
     var userNAmes = ["kaan","mahmut","tarik","ferdi"]
     
     var trtClass = TRTClass()
@@ -35,7 +31,7 @@ class TestViewController: UIViewController, DevletVergi {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        trtClass.tayyip = self
+        trtClass.TRTBaskani = self
         kilowattYazdır()
         kullaniciEkle()
         kullaniciYazdir()
@@ -168,9 +164,8 @@ class TestViewController: UIViewController, DevletVergi {
     }
     
     func trtPayiEkle(fatura:Double) -> Double{
-        let trtNewPayi = trtClass.process()
-        let faturaFinal = fatura * trtNewPayi
-        return faturaFinal
+        let trtNewPayi = trtClass.process(fatura: fatura)
+        return trtNewPayi
     }
     
     func calculate(birimFiyat:BirimFiyat,MontlyUsage:Double,type:kullanimTipi) -> Double {
